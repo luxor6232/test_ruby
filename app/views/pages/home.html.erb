@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container ">
+  <div class="">
+    <% if user_signed_in? %>
+        <h1 class="text-center pt-5">Bienvenido</h1>
+        <h2 class="text-center">Para acceder a la lista de cliente presione el boton</h2>
+        <div class="d-flex justify-content-center pt-5">
+          <%= link_to 'Agregar Cliente', customers_path, class:"btn btn-primary ", style:"width: 200px"%>
+        </div>
+        
+    <% else %>
+        <h1>Bienvenido</h1>
+    <% end %>
+  </div>
+</div>
+
+

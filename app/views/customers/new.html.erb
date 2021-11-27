@@ -1,0 +1,19 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-10 offset-lg-1">
+      <div class="bg-white rounded p-3 shadow">
+        <h1 style="text-align:center;">Post</h1>
+        
+          <%= simple_form_for [@customer] do |f| %>
+            <%= f.input :name, prompt: "Nombre", class:"", placeholder: "", label: "Nombre"%>
+            <%= f.input :lastName, prompt: "Apellido", class:"", placeholder: "", label: "Apellido"%>
+            <%= f.input :cellPhone, prompt: "Telefono", class:"", placeholder: "", label: "Telefono"%>
+            <%= f.input :email, prompt: "Correo Electronico", class:"", placeholder: "", label: "Correo Electronico"%>
+            <%= f.input :state, prompt: "Estado", class:"", placeholder: "", label: "Estado"%>
+            <%= f.submit class: "btn btn-primary", value:"Crear Cliente"%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

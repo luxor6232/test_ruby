@@ -1,0 +1,14 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-10 offset-lg-1">
+      <div class="bg-white rounded p-3 shadow">
+        <h1 style="text-align:center;">Comentario</h1>
+          <%= simple_form_for [@conversation] do |f| %>
+            <%= f.input :comment, prompt: "Comentario", as: :text, class:"", placeholder: "", label: "Comentario"%>
+            <%= f.submit class: "btn btn-primary", value:"Subir comentario"%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

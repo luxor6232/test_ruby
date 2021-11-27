@@ -1,0 +1,35 @@
+<div class="container">
+<h1 class="py-5">Prospectos / <%= link_to 'Agregar un nuevo Prospecto', new_customer_path, style:"width: 200px"%></h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo Electronico</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Conversacion</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <th scope="row"><%= customer.name %></th>
+        <td><%= customer.lastName %></td>
+        <td><%= customer.cellPhone %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.state %></td>
+        <td>
+          <%= link_to 'Conversacion', new_conversation_path, class:"", style:"width: 200px"%>
+        
+        </td>
+        <td>
+          <%= link_to 'Ver', '#', class:"", style:"width: 200px"%>
+          <%= link_to 'Editar', '#', class:"", style:"width: 200px"%>
+        </td>
+      </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>
